@@ -1,0 +1,27 @@
+{
+  "pluginAlias": "SleepIQDev",
+  "pluginType": "platform",
+  "singular": true,
+  "customUi": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true,
+        "default": "Example Dynamic Platform"
+      },
+      "token": {
+        "title": "Token",
+        "type": "string",
+        "required": true
+      },
+      "username": {
+        "title": "Username",
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}

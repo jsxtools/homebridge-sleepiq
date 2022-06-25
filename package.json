@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "private": true,
+  "name": "@jsxtools/homebridge-sleepiq-dev",
+  "displayName": "Homebridge SleepIQ",
+  "description": "Integration with SleepIQ.",
+  "type": "module",
+  "version": "1.0.0",
+  "license": "CC0-1.0",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "bugs": "https://github.com/jsxtools/homebridge-sleepiq/issues",
+  "homepage": "https://github.com/jsxtools/homebridge-sleepiq",
+  "repository": "https://github.com/jsxtools/homebridge-sleepiq.git",
+  "engines": {
+    "node": ">=14.18.1",
+    "homebridge": ">=1.3.5"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "config.schema.json",
+    "dist",
+    "homebridge-ui"
+  ],
+  "scripts": {
+    "lint": "eslint src/**.ts --max-warnings=0",
+    "watch": "npm run build && npm link && nodemon",
+    "build": "rm -rf dist && tsc",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "dependencies": {
+    "@homebridge/plugin-ui-utils": "0.0.19"
+  },
+  "devDependencies": {
+    "@types/node": "18.0.0",
+    "eslint": "8.18.0",
+    "eslint-config-dev": "3.1.0",
+    "homebridge": "1.5.0",
+    "homebridge-config-ui-x": "4.48.1",
+    "nodemon": "2.0.18",
+    "ts-node": "10.8.1",
+    "typescript": "4.7.4"
+  }
+}
